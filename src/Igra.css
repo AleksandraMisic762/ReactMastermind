@@ -1,0 +1,54 @@
+.igra{
+    display: flex;
+    margin-left: 15em;
+    margin-top: 2em;
+    flex-direction: row;
+}
+
+
+.redovi{
+    display: flex;
+    justify-self: left;
+    flex-direction: column;
+}
+
+#resenje{
+    margin-top: 3em;
+}
+
+.dugmad{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 15em;
+    flex-wrap: wrap;
+    height: 15em;
+    border: solid 2pt black;
+    padding: 1em;
+    justify-content: center;
+    align-content: center;
+    margin-left: 5em;
+}
+
+.rezultatPokusaja{
+    border: solid 1pt black;
+    background-color: rgb(252, 250, 250);
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-basis: 64px;
+    flex-wrap: wrap;
+}
+.rezultatPolje{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin: 3px;
+}
+
