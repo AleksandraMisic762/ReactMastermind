@@ -1,15 +1,17 @@
 import Header from './Header'
-import Igra from './Igra'
-import './App.css';
+import Footer from './Footer'
+import './style/App.css';
 
-function App() {
+
+function App({body}) {
     return (
-
         <div>
             <Header />
-            <Igra />
-        </div>
+            
+            {body}
 
+            <Footer />
+        </div>
     )
 }
 

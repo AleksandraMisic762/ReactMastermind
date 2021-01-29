@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Polje from "./Polje"
-import "./Polje.css"
+import "./style/Polje.css"
 
 export default class Dugme extends Component {
 

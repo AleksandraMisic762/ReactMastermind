@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Polje from './Polje'
-import './Red.css';
+import './style/Red.css';
 
 export default class Red extends Component {
 

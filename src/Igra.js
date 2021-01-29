@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Red from './Red'
 import Dugme from './Dugme'
-import './Igra.css'
+import './style/Igra.css'
 
 export default class Igra extends Component {
 
@@ -80,7 +80,7 @@ export default class Igra extends Component {
 
         if (this.state.potezi.length === 0) {
 
-            let noviPotezi = [this.state.potezi.unshift(potez)]
+            let noviPotezi = [potez]
 
             this.setState({ potezi: noviPotezi });
         } else {
@@ -163,7 +163,9 @@ export default class Igra extends Component {
             b++;
         }
 
-
+        if (this.state.potezi.length === 24) {
+            this.zavrsiIgru();
+        }
 
 
     }
@@ -171,7 +173,6 @@ export default class Igra extends Component {
 
 
     zavrsiIgru() {
-        console.log("Kraj");
         this.setState({ gotovo: true });
         this.showSolution();
     }
@@ -184,81 +185,81 @@ export default class Igra extends Component {
 
     render() {
         return (
-            <div className="igra" >
+            <div>
+                <div className="igra" >
 
-                <div className="redovi">
-                    <div className="red">
-                        <Red ref="prvi_red" />
-                        <div className="rezultatPokusaja">
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
+                    <div className="redovi">
+                        <div className="red">
+                            <Red ref="prvi_red" />
+                            <div className="rezultatPokusaja">
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                            </div>
+                        </div>
+                        <div className="red">
+                            <Red ref="drugi_red" />
+                            <div className="rezultatPokusaja">
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                            </div>
+                        </div>
+                        <div className="red">
+                            <Red ref="treci_red" />
+                            <div className="rezultatPokusaja">
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                            </div>
+                        </div>
+                        <div className="red">
+                            <Red ref="cetvrti_red" />
+                            <div className="rezultatPokusaja">
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                            </div>
+                        </div>
+                        <div className="red">
+                            <Red ref="peti_red" />
+                            <div className="rezultatPokusaja">
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                            </div>
+                        </div>
+                        <div className="red">
+                            <Red ref="sesti_red" />
+                            <div className="rezultatPokusaja">
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                                <div className="rezultatPolje"></div>
+                            </div>
+                        </div>
+
+
+                        <div id="resenje">
+                            <Red ref="resenje" />
                         </div>
                     </div>
-                    <div className="red">
-                        <Red ref="drugi_red" />
-                        <div className="rezultatPokusaja">
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
+                        <div className="dugmad">
+                            <Dugme color="red" clickFunction={this.clickFunction} />
+                            <Dugme color="yellow" clickFunction={this.clickFunction} />
+                            <Dugme color="green" clickFunction={this.clickFunction} />
+                            <Dugme color="gray" clickFunction={this.clickFunction} />
+                            <Dugme color="blue" clickFunction={this.clickFunction} />
+                            <Dugme color="pink" clickFunction={this.clickFunction} />
+
+
                         </div>
-                    </div>
-                    <div className="red">
-                        <Red ref="treci_red" />
-                        <div className="rezultatPokusaja">
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                        </div>
-                    </div>
-                    <div className="red">
-                        <Red ref="cetvrti_red" />
-                        <div className="rezultatPokusaja">
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                        </div>
-                    </div>
-                    <div className="red">
-                        <Red ref="peti_red" />
-                        <div className="rezultatPokusaja">
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                        </div>
-                    </div>
-                    <div className="red">
-                        <Red ref="sesti_red" />
-                        <div className="rezultatPokusaja">
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                            <div className="rezultatPolje"></div>
-                        </div>
-                    </div>
 
-
-
-
-
-
-
-                    <div id="resenje">
-                        <Red ref="resenje" />
-                    </div>
-                </div>
-                <div className="dugmad">
-                    <Dugme color="red" clickFunction={this.clickFunction} />
-                    <Dugme color="yellow" clickFunction={this.clickFunction} />
-                    <Dugme color="green" clickFunction={this.clickFunction} />
-                    <Dugme color="gray" clickFunction={this.clickFunction} />
-                    <Dugme color="blue" clickFunction={this.clickFunction} />
-                    <Dugme color="pink" clickFunction={this.clickFunction} />
                 </div>
             </div>
         )

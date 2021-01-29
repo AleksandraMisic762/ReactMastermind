@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Polje.css';
+import './style/Polje.css';
 
 export default class Polje extends Component {
 
