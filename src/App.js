@@ -3,12 +3,12 @@ import Footer from './Footer'
 import './style/App.css';
 
 
-function App({body}) {
+ function App({children}) {
     return (
         <div>
             <Header />
             
-            {body}
+            {children}
 
             <Footer />
         </div>
